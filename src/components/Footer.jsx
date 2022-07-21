@@ -1,20 +1,20 @@
 import React from "react";
 
-function Footer() {
+function Footer({color, backgroundColor}) {
+  const footerStyle = {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
+    width: "100%",
+    height: "10vh",
+    color: color,
+    backgroundColor: backgroundColor
+  }
     return (
-        <header>
-        <h1>Radtke Renovations LLC</h1>
-        <h2>Local Arizona Contractor</h2>
-        <nav>
-            <ul>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Gallery</a>
-                <a href="#">Contract</a>
-            </ul>
-        </nav>
-      </header>
+        <footer style={footerStyle}>
+          <span>Copyright &copy; 2022 Radtke Renovations LLC</span>
+        </footer>
     );
   }
 

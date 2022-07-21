@@ -5,7 +5,7 @@ function Header() {
   const headerStyle = {
     display: "flex",
     width: "100%",
-    height: "15vh",
+    height: "10vh",
     flexDirection: "row",
     justifyContent: "space-around",
     backgroundColor: "black",
@@ -23,7 +23,11 @@ function Header() {
   }
   const logoStyle = {
     width: "auto",
-    height: "100%"
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center"
   }
 
   const navStyle = {
@@ -46,10 +50,10 @@ function Header() {
           </a>
           <nav style={navStyle}>
             <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
+            <a href="#about-section">About</a>
+            <a href="#services-section">Services</a>
             <a href="#">Gallery</a>
-            <a href="#">Contract</a>
+            <a href="#">Contact</a>
           </nav>
       </header>
     );
