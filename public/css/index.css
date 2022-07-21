@@ -1,6 +1,17 @@
+html {
+    scroll-behavior: smooth;
+  }
 body {
     background-color: black;
     font-size: 62.5%;
+}
+
+#top-section {
+    background: url("../images/gallery/P3.jpg"), rgba(22, 22, 22, 0.25);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-blend-mode: overlay;
 }
 
 h1 {
@@ -11,10 +22,32 @@ h2 {
     font-size: 2.5em;
 }
 
+h3 {
+    font-size: 2em;
+}
+
+
 nav {
     font-size: 2.0em;
 }
 
 p {
     font-size: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a {
+    color: gray;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.arrow {
+    cursor: pointer;
 }
