@@ -40,8 +40,8 @@ function Header() {
   }
 
     return (
-        <header style={headerStyle}>
-          <a style={logoAreaStyle} href="#">
+        <header class="header" style={headerStyle}>
+          <a style={logoAreaStyle} href="#header">
             <img style={logoStyle} src="images/logo/logo.png" alt="Radtke Renovations LLC"></img>
             <div style={logoStyle}>
               <h1>Radtke Renovations LLC</h1>
@@ -49,11 +49,11 @@ function Header() {
             </div>
           </a>
           <nav style={navStyle}>
-            <a href="#">Home</a>
+            <a href="#header">Home</a>
             <a href="#about-section">About</a>
             <a href="#services-section">Services</a>
             <a href="#">Gallery</a>
-            <a href="#">Contact</a>
+            <a href="#contact-section">Contact</a>
           </nav>
       </header>
     );
