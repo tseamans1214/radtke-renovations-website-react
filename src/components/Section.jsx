@@ -4,7 +4,7 @@ import React from "react";
 function Section ({id, title, paragraph, list, color, backgroundColor, backgroundImage, children}) {
     const sectionStyle = {
         display: "flex",
-        height: "50vh",
+        minHeight: "50vh",
         alignItems: "center",
         flexDirection: "column",
         color: color,
@@ -16,10 +16,17 @@ function Section ({id, title, paragraph, list, color, backgroundColor, backgroun
     }
     return (
         <section id={id} style={sectionStyle}>
+            
+            {title &&
             <h2>{title}</h2>
+            }
+            {paragraph &&
             <p>{paragraph}</p>
+            }
+            {list && 
             <ul>
             </ul>
+            }
             {children}
             
         </section>

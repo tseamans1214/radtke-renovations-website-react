@@ -52,9 +52,12 @@ function SlideShow() {
     const [counter, setCounter] = useState(1);
 
     useEffect(() => {
-        
-        setCounter(1);
-    }, []);
+        // setCounter(1);
+        const interval = setInterval(() => {
+            changeCount(1);
+          }, 5000);
+          return () => clearInterval(interval);
+    }, [counter]);
 
     const changeCount = (amountChanged) => {
         if (counter + amountChanged == 0) {
@@ -67,7 +70,6 @@ function SlideShow() {
     };
 
     return (
-    
         <section style={sectionStyle}>
             <div className="col" style={colStyle}>
                 <h3>Before</h3>
