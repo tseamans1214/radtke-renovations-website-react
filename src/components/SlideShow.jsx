@@ -1,8 +1,14 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import Circle from "./Circle";
 // import Images from "../../public/images/before-after";
 
 function SlideShow() {
+    const contentStyle = {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center"
+    }
     const sectionStyle = {
         display: "flex",
         flexDirection: "row",
@@ -49,6 +55,11 @@ function SlideShow() {
         color: "white"
     }
 
+    const circleSectionStyle = {
+        display: "flex",
+        flexDirection: "coloumn"
+    }
+
     const [counter, setCounter] = useState(1);
 
     useEffect(() => {
@@ -70,18 +81,28 @@ function SlideShow() {
     };
 
     return (
-        <section style={sectionStyle}>
-            <div className="col" style={colStyle}>
-                <h3>Before</h3>
-                <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
-                <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
+        <div style={contentStyle}>
+            <section style={sectionStyle}>
+                <div className="col" style={colStyle}>
+                    <h3>Before</h3>
+                    <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
+                    <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
+                </div>
+                <div className="col" style={colStyle}>
+                    <h3>After</h3>
+                    <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
+                    <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
+                </div>
+                
+            </section>
+            <div style={circleSectionStyle}>
+                <Circle></Circle>
+                <Circle></Circle>
+                <Circle></Circle>
+                <Circle></Circle>
             </div>
-            <div className="col" style={colStyle}>
-                <h3>After</h3>
-                <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
-                <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
-            </div>
-        </section>
+        </div>
+        
     );
 }
 
