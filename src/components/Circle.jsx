@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from 'react';
 
 function Circle({index}) {
+    const [selected, setSelected] = useState(false);
+
   const circleStyle = {
     width: "25px",
     height: "25px",

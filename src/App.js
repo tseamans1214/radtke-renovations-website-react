@@ -1,7 +1,9 @@
 import React from "react";
+import Circle from "./components/Circle";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Section from "./components/Section";
+import Service from "./components/Service";
 import SlideShow from "./components/SlideShow";
 
 function App() {
@@ -9,6 +11,13 @@ function App() {
     width: "100%",
     height: "100%",
     backgroundColor: "black"
+  }
+  const servicesStyle = {
+    display: "flex",
+    flexWrap: "wrap",
+    width: "100%",
+    height: "100%",
+    minHeight: "100%"
   }
   return (
     <div style={bodyStyle} className="App">
@@ -34,6 +43,34 @@ function App() {
         color="black"
         backgroundColor="white"
         backgroundImage="../../public/images/gallery/P3.jpg"
+        children={
+          <div style={servicesStyle}>
+            <Service
+              title="Residential"
+              backgroundImage="/images/stock/residential.jpg" />
+            <Service
+              title="Commercial"
+              backgroundImage="/images/stock/commercial.jpg" />
+            <Service
+              title="New Construction"
+              backgroundImage="/images/stock/construction.jpg" />
+            <Service
+              title="Renovations"
+              backgroundImage="/images/stock/renovation.jpg" />
+              <Service
+              title="Remodels"
+              backgroundImage="/images/stock/remodel.jpg" />
+            <Service
+              title="Handyman Services"
+              backgroundImage="/images/stock/handyman.jpg" />
+            <Service
+              title="Building Maintenance"
+              backgroundImage="/images/stock/maintenance.jpg" />
+            <Service
+              title="And More!"
+              />
+          </div>
+        }
       />
       <Section 
         id="past-work-section"

@@ -70,3 +70,9 @@ nav a:hover {
 .arrow {
     cursor: pointer;
 }
+
+.service {
+    display: inline-block;
+    width: 50%;
+    max-height: 25%;
+}
