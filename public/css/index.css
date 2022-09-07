@@ -76,3 +76,9 @@ nav a:hover {
     width: 50%;
     max-height: 25%;
 }
+
+@media only screen and (max-width: 768px) {
+    .service{
+        width: 100% !important;
+    }
+ }

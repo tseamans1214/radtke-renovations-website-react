@@ -16,8 +16,8 @@ function Section ({id, title, paragraph, list, color, backgroundColor, backgroun
     }
     const childrenStyle = {
         width: "100%",
-        height: "600px",
-        maxHeight: "100%",
+        // height: "600px",
+        maxHeight: "100%"
     }
     return (
         <section id={id} style={sectionStyle}>

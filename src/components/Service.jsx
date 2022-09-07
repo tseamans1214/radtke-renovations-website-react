@@ -20,10 +20,12 @@ function Service({title, backgroundImage}) {
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundBlendMode: "overlay",
+    border: "1px solid black",
     textAlign: "center",
     color: "white"
   }
   const serviceTitleStyle = {
+    fontSize: "3em",
     marginTop: "50"
   }
     return (
