@@ -23,17 +23,22 @@ function SlideShow() {
         width: "50%",
         height: "auto"
     }
+    const imageContainer = {
+        position: "relative",
+        width: "100%",
+        height: "auto"
+    }
     const imageStyle = {
         width: "100%",
         height: "auto"
     }
     const leftArrowStyle = {
         width: "15%",
-        height: "15%",
+        height: "100%",
         backgroundColor: "rgba(0,0,0,0.5)",
         position: "absolute",
         left: "0%",
-        top: "50%",
+        top: "0%",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
@@ -43,11 +48,11 @@ function SlideShow() {
 
     const rightArrowStyle = {
         width: "15%",
-        height: "15%",
+        height: "100%",
         backgroundColor: "rgba(0,0,0,0.5)",
         position: "absolute",
         right: "0%",
-        top: "50%",
+        top: "0%",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-around",
@@ -85,15 +90,19 @@ function SlideShow() {
             <section style={sectionStyle}>
                 <div className="col" style={colStyle}>
                     <h3>Before</h3>
-                    <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
-                    <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
+                    <div style={imageContainer}>
+                        <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
+                        <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
+                    
+                    </div>
                 </div>
                 <div className="col" style={colStyle}>
                     <h3>After</h3>
-                    <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
-                    <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
+                    <div style={imageContainer}>
+                        <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
+                        <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
+                    </div>
                 </div>
-                
             </section>
             <div style={circleSectionStyle}>
                 <Circle></Circle>
