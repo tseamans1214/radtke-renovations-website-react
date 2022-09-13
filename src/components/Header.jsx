@@ -22,8 +22,8 @@ function Header() {
     textDecoration: "none"
   }
   const logoStyle = {
-    width: "auto",
-    height: "100%",
+    maxWidth: "100%",
+    height: "auto",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -49,11 +49,11 @@ function Header() {
             </div>
           </a>
           <nav style={navStyle}>
-            <a href="#header">Home</a>
-            <a href="#about-section">About</a>
-            <a href="#services-section">Services</a>
+            <a class="hide" href="#header">Home</a>
+            <a class="hide" href="#about-section">About</a>
+            <a class="hide" href="#services-section">Services</a>
             <a href="#">Gallery</a>
-            <a href="#contact-section">Contact</a>
+            <a class="hide" href="#contact-section">Contact</a>
           </nav>
       </header>
     );
