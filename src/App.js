@@ -35,6 +35,17 @@ function App() {
         color="white"
         backgroundColor="gray"
         backgroundImage="../../public/images/gallery/P3.jpg"
+        children={
+          <div>
+            <h3>Mission</h3>
+              <ul>
+                <li>To perform for our customers the highest level of quality construction services at fair market competative prices.</li>
+                <li>To maintain the highest levels of professionalism, integrity, honesty and fairness with our suppliers, subcontractors, professional associates and customers.</li>
+                <li>To become the leading construction firm, while delivering projects that consistantly exceeds international standards and provide exceptional customer satisfaction</li>
+                <li>To continually devliver excellent value and innavative construction solutions to meet our clients requirements.</li>
+              </ul>
+          </div>
+        }
       />
       <Section 
         id="services-section"
