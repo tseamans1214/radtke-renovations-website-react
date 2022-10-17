@@ -52,8 +52,9 @@ function Header() {
             <a class="hide" href="#header">Home</a>
             <a class="hide" href="#about-section">About</a>
             <a class="hide" href="#services-section">Services</a>
-            <a href="#">Gallery</a>
+            <a class="hide" href="#">Gallery</a>
             <a class="hide" href="#contact-section">Contact</a>
+            <div class="nav-button" onClick="openNav()">☰</div>
           </nav>
       </header>
     );

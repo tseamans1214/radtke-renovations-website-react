@@ -10,7 +10,8 @@ function App() {
   const bodyStyle = {
     width: "100%",
     height: "100%",
-    backgroundColor: "black"
+    backgroundColor: "black",
+    margin: "0"
   }
   const servicesStyle = {
     display: "flex",
