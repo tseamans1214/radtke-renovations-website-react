@@ -39,6 +39,18 @@ function Header() {
     textDecoration: "none"
   }
 
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    // document.getElementById("root").style.marginLeft = "250px";
+    // document.getElementById("nav-button").style.display = "none";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    // document.getElementById("root").style.marginLeft= "0";
+    // document.getElementById("nav-button").style.display = "block";
+  }
+
     return (
         <header class="header" style={headerStyle}>
           <a style={logoAreaStyle} href="#header">
@@ -54,8 +66,16 @@ function Header() {
             <a class="hide" href="#services-section">Services</a>
             <a class="hide" href="#">Gallery</a>
             <a class="hide" href="#contact-section">Contact</a>
-            <div class="nav-button" onClick="openNav()">☰</div>
+            <div id="nav-button" class="nav-button" onClick={openNav}>☰</div>
           </nav>
+          <div id="mySidebar" class="sidebar">
+            <a href="#" class="closebtn" onClick={closeNav}>×</a>
+            <a href="#">Home</a>
+            <a href="#about-section">About</a>
+            <a href="#services-section">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#contact-section">Contact</a>
+          </div>
       </header>
     );
   }
