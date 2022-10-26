@@ -20,13 +20,20 @@ function App() {
     height: "100%",
     minHeight: "100%"
   }
+  const missionSectionStyle = {
+    padding: "20px",
+    textAlign: "center"
+  }
+  const missionListStyle = {
+    textAlign: "left"
+  }
   return (
     <div style={bodyStyle} className="App">
       <Header />
       <Section 
         id="top-section"
-        title="title"
-        paragraph="Hello this paragraph"
+        title="Turn your home into your dream home!"
+        paragraph="Contact us today!"
         color="black"
       />
       <Section 
@@ -37,9 +44,9 @@ function App() {
         backgroundColor="gray"
         backgroundImage="../../public/images/gallery/P3.jpg"
         children={
-          <div>
+          <div style={missionSectionStyle}>
             <h3>Mission</h3>
-              <ul>
+              <ul style={missionListStyle}>
                 <li>To perform for our customers the highest level of quality construction services at fair market competative prices.</li>
                 <li>To maintain the highest levels of professionalism, integrity, honesty and fairness with our suppliers, subcontractors, professional associates and customers.</li>
                 <li>To become the leading construction firm, while delivering projects that consistantly exceeds international standards and provide exceptional customer satisfaction</li>

@@ -23,36 +23,38 @@ html {
 body {
     background-color: black;
     font-size: 62.5%;
+    font-family: 'Arimo', sans-serif;
     margin: 0;
 }
 
 #top-section {
-    background: url("../images/gallery/P3.jpg"), rgba(22, 22, 22, 0.10);
+    background: url("../images/gallery/P3.jpg"), rgba(22, 22, 22, 0.0);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     background-blend-mode: overlay;
+    min-height: 50vh;
 }
 
 h1 {
-    font-size: 3.0em;
+    font-size: 3.5em;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 3.0em;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 
 nav {
-    font-size: 2.0em;
+    font-size: 2.3em;
 }
 
-p {
-    font-size: 1.5em;
+p, li, footer{
+    font-size: 2.0em;
 }
 
 a {
@@ -143,5 +145,8 @@ nav a:hover {
     }
     .header {
         justify-content: space-between !important;
+    }
+    nav {
+        font-size: 2.0em;
     }
  }

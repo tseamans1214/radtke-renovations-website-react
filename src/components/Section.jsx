@@ -4,7 +4,9 @@ import React from "react";
 function Section ({id, title, paragraph, list, color, backgroundColor, backgroundImage, children}) {
     const sectionStyle = {
         display: "flex",
-        minHeight: "50vh",
+        // minHeight: "50vh",
+        paddingTop: "20px",
+        // paddingBottom: "20px",
         alignItems: "center",
         flexDirection: "column",
         color: color,
@@ -19,6 +21,9 @@ function Section ({id, title, paragraph, list, color, backgroundColor, backgroun
         // height: "600px",
         maxHeight: "100%"
     }
+    const paragraphStyle = {
+        padding: "20px"
+    }
     return (
         <section id={id} style={sectionStyle}>
             
@@ -26,7 +31,7 @@ function Section ({id, title, paragraph, list, color, backgroundColor, backgroun
             <h2>{title}</h2>
             }
             {paragraph &&
-            <p>{paragraph}</p>
+            <p style={paragraphStyle} >{paragraph}</p>
             }
             {list && 
             <ul>

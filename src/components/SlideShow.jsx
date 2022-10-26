@@ -62,7 +62,8 @@ function SlideShow() {
 
     const circleSectionStyle = {
         display: "flex",
-        flexDirection: "coloumn"
+        flexDirection: "row",
+        padding: "20px"
     }
 
     const [counter, setCounter] = useState(1);
