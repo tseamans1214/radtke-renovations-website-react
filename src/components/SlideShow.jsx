@@ -106,10 +106,26 @@ function SlideShow() {
                 </div>
             </section>
             <div style={circleSectionStyle}>
-                <Circle></Circle>
-                <Circle></Circle>
-                <Circle></Circle>
-                <Circle></Circle>
+                <Circle 
+                    index={1}
+                    counter={counter}
+                />
+                <Circle 
+                    index={2}
+                    counter={counter}
+                />
+                <Circle 
+                    index={3}
+                    counter={counter}
+                />
+                <Circle 
+                    index={4}
+                    counter={counter}
+                />
+                <Circle 
+                    index={5}
+                    counter={counter}
+                />
             </div>
         </div>
         

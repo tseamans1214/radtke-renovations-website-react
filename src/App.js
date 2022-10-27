@@ -3,6 +3,7 @@ import Circle from "./components/Circle";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Section from "./components/Section";
+import FadeInSection from "./components/FadeInSection";
 import Service from "./components/Service";
 import SlideShow from "./components/SlideShow";
 
