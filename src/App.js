@@ -27,6 +27,9 @@ function App() {
   const missionListStyle = {
     textAlign: "left"
   }
+  const contactSectionStyle = {
+    textAlign: "center"
+  }
   return (
     <div style={bodyStyle} className="App">
       <Header />
@@ -39,13 +42,13 @@ function App() {
       <Section 
         id="about-section"
         title="Who We Are"
-        paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem numquam dignissimos atque tempora officia modi et nam possimus distinctio nostrum? Officiis sequi ipsa laboriosam omnis asperiores atque vero tempore provident!"
+        paragraph="We are a local Arizona renovation company that prides on providing professional service to customers."
         color="white"
-        backgroundColor="gray"
+        backgroundColor="black"
         backgroundImage="../../public/images/gallery/P3.jpg"
         children={
           <div style={missionSectionStyle}>
-            <h3>Mission</h3>
+            <h3>Our Mission</h3>
               <ul style={missionListStyle}>
                 <li>To perform for our customers the highest level of quality construction services at fair market competative prices.</li>
                 <li>To maintain the highest levels of professionalism, integrity, honesty and fairness with our suppliers, subcontractors, professional associates and customers.</li>
@@ -58,7 +61,7 @@ function App() {
       <Section 
         id="services-section"
         title="How We Can Help"
-        paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem numquam dignissimos atque tempora officia modi et nam possimus distinctio nostrum? Officiis sequi ipsa laboriosam omnis asperiores atque vero tempore provident!"
+        paragraph="We provide a wide range of services to fit your needs with the main ones listed below. Contact us today for any questions!"
         color="black"
         backgroundColor="white"
         backgroundImage="../../public/images/gallery/P3.jpg"
@@ -87,6 +90,7 @@ function App() {
               backgroundImage="/images/stock/maintenance.jpg" />
             <Service
               title="And More!"
+              backgroundImage="/images/logo/logo-small.png"
               />
           </div>
         }
@@ -94,17 +98,24 @@ function App() {
       <Section 
         id="past-work-section"
         title="Check Out Our Past Work!"
-        color="black"
-        backgroundColor="gray"
+        color="white"
+        backgroundColor="black"
         children={<SlideShow />}
       />
       <Section 
         id="contact-section"
         title="Contact Us!"
-        paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem numquam dignissimos atque tempora officia modi et nam possimus distinctio nostrum? Officiis sequi ipsa laboriosam omnis asperiores atque vero tempore provident!"
+        paragraph="Easily get a hold of us by our phone number or email!"
         color="black"
         backgroundColor="white"
         backgroundImage="../../public/images/gallery/P3.jpg"
+        children={
+          <div style={contactSectionStyle}>
+            <h3>Owner: Tyson Radtke</h3>
+            <p>Phone Number: <strong>602-705-6625</strong></p>
+            <p>Email: <strong>Tyson@Radrenosllc.com</strong></p>
+          </div>
+        }
       />
       <Footer 
         color="white"
