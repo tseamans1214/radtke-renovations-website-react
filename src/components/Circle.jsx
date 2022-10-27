@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 
-function Circle({index, counter}) {
+function Circle({index, counter, setCounter}) {
     const [selected, setSelected] = useState(false);
     let color = "black";
     if (index == counter) {
@@ -19,8 +19,12 @@ function Circle({index, counter}) {
     borderRadius: "15px",
     cursor: "pointer"
   }
+
+  // function setCounter() {
+  //   counter = index;
+  // }
     return (
-        <div style={circleStyle}></div>
+        <div style={circleStyle} onClick={() => setCounter(index)}></div>
     );
   }
 

@@ -109,22 +109,27 @@ function SlideShow() {
                 <Circle 
                     index={1}
                     counter={counter}
+                    setCounter={setCounter}
                 />
                 <Circle 
                     index={2}
                     counter={counter}
+                    setCounter={setCounter}
                 />
                 <Circle 
                     index={3}
                     counter={counter}
+                    setCounter={setCounter}
                 />
                 <Circle 
                     index={4}
                     counter={counter}
+                    setCounter={setCounter}
                 />
                 <Circle 
                     index={5}
                     counter={counter}
+                    setCounter={setCounter}
                 />
             </div>
         </div>
