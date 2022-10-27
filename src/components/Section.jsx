@@ -21,14 +21,21 @@ function Section ({id, title, paragraph, list, color, backgroundColor, backgroun
         // height: "600px",
         maxHeight: "100%"
     }
+    const titleStyle = {
+        paddingTop: "8px",
+        paddingBottom: "8px",
+        borderTop: "2px solid " + color,
+        borderBottom: "2px solid " + color
+    }
     const paragraphStyle = {
         padding: "20px"
     }
+    
     return (
         <section id={id} style={sectionStyle}>
             
             {title &&
-            <h2>{title}</h2>
+            <h2 style={titleStyle}>{title}</h2>
             }
             {paragraph &&
             <p style={paragraphStyle} >{paragraph}</p>

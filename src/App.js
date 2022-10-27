@@ -13,6 +13,19 @@ function App() {
     backgroundColor: "black",
     margin: "0"
   }
+  const titleSectionStyle = {
+    textAlign: "center",
+    marginTop: "12%"
+  }
+  const contactButtonStyle = {
+    display: "inline-block",
+    padding: "0px",
+    margin: "0px",
+    // backgroundColor: "white",
+    color: "white",
+    // border: "2px solid black",
+    borderRadius: "10px"
+  }
   const servicesStyle = {
     display: "flex",
     flexWrap: "wrap",
@@ -21,7 +34,7 @@ function App() {
     minHeight: "100%"
   }
   const missionSectionStyle = {
-    padding: "20px",
+    padding: "20px 60px 20px 60px",
     textAlign: "center"
   }
   const missionListStyle = {
@@ -35,9 +48,18 @@ function App() {
       <Header />
       <Section 
         id="top-section"
-        title="Turn your home into your dream home!"
-        paragraph="Contact us today!"
-        color="black"
+        // title="Turn your home into your dream home!"
+        // paragraph="Contact us today!"
+        color="white"
+        children={
+          <div style={titleSectionStyle}>
+            <h1>Turn Your home into your dream home!</h1>
+            <div style={contactButtonStyle}>
+              <h2>Contact us TODAY!</h2>
+              <h3>602-705-6625</h3>
+            </div>
+          </div>
+        }
       />
       <Section 
         id="about-section"
