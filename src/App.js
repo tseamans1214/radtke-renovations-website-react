@@ -112,7 +112,7 @@ function App() {
               backgroundImage="/images/stock/maintenance.jpg" />
             <Service
               title="And More!"
-              backgroundImage="/images/logo/logo-small.png"
+              backgroundImage="/images/logo/logo-xsmall.png"
               />
           </div>
         }
