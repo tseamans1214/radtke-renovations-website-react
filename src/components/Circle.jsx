@@ -17,7 +17,8 @@ function Circle({index, counter, setCounter}) {
     backgroundColor: color,
     border: "2px solid white",
     borderRadius: "15px",
-    cursor: "pointer"
+    cursor: "pointer",
+    transition: "background-color 0.8s ease"
   }
 
   // function setCounter() {

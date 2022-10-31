@@ -35,7 +35,7 @@ function SlideShow() {
     const leftArrowStyle = {
         width: "15%",
         height: "100%",
-        backgroundColor: "rgba(0,0,0,0.5)",
+        backgroundColor: "rgba(0,0,0,0.0)",
         position: "absolute",
         left: "0%",
         top: "0%",
@@ -49,7 +49,7 @@ function SlideShow() {
     const rightArrowStyle = {
         width: "15%",
         height: "100%",
-        backgroundColor: "rgba(0,0,0,0.5)",
+        backgroundColor: "rgba(0,0,0,0.0)",
         position: "absolute",
         right: "0%",
         top: "0%",
@@ -92,7 +92,7 @@ function SlideShow() {
                 <div className="col" style={colStyle}>
                     <h3>Before</h3>
                     <div style={imageContainer}>
-                        <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
+                        <img  style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
                         <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
                     
                     </div>
