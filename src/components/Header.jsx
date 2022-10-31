@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Header() {
+function Header({setGalleryVisible}) {
   const headerStyle = {
     display: "flex",
     width: "100%",
@@ -61,20 +61,20 @@ function Header() {
             </div>
           </a>
           <nav style={navStyle}>
-            <a class="hide" href="#header">Home</a>
-            <a class="hide" href="#about-section">About</a>
-            <a class="hide" href="#services-section">Services</a>
-            <a class="hide" href="#">Gallery</a>
-            <a class="hide" href="#contact-section">Contact</a>
+            <a class="hide" href="#header" onClick={() => setGalleryVisible(false)}>Home</a>
+            <a class="hide" href="#about-section" onClick={() => setGalleryVisible(false)}>About</a>
+            <a class="hide" href="#services-section" onClick={() => setGalleryVisible(false)}>Services</a>
+            <a class="hide" href="#" onClick={() => setGalleryVisible(true)}>Gallery</a>
+            <a class="hide" href="#contact-section" onClick={() => setGalleryVisible(false)}>Contact</a>
             <div id="nav-button" class="nav-button" onClick={openNav}>☰</div>
           </nav>
           <div id="mySidebar" class="sidebar">
             <a href="#" class="closebtn" onClick={closeNav}>×</a>
-            <a href="#">Home</a>
-            <a href="#about-section">About</a>
-            <a href="#services-section">Services</a>
-            <a href="#">Gallery</a>
-            <a href="#contact-section">Contact</a>
+            <a href="#" onClick={() => setGalleryVisible(false)}>Home</a>
+            <a href="#about-section" onClick={() => setGalleryVisible(false)}>About</a>
+            <a href="#services-section" onClick={() => setGalleryVisible(false)}>Services</a>
+            <a href="#" onClick={() => setGalleryVisible(true)}>Gallery</a>
+            <a href="#contact-section" onClick={() => setGalleryVisible(false)}>Contact</a>
           </div>
       </header>
     );

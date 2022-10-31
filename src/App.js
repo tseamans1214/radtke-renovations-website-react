@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import Circle from "./components/Circle";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -44,9 +45,19 @@ function App() {
   const contactSectionStyle = {
     textAlign: "center"
   }
+  const [galleryVisible, setGalleryVisible] = useState(false);
+  useEffect(() => {
+  }, [galleryVisible]);
   return (
     <div style={bodyStyle} className="App">
-      <Header />
+      <Header 
+        setGalleryVisible={setGalleryVisible}
+      />
+      {galleryVisible &&
+        <div></div>
+      }
+      {galleryVisible === false &&
+      <>
       <Section 
         id="top-section"
         // title="Turn your home into your dream home!"
@@ -140,6 +151,8 @@ function App() {
           </div>
         }
       />
+      </>
+      }
       <Footer 
         color="white"
         backgroundColor="black"
