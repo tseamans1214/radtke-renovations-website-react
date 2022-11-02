@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Section from "./components/Section";
 import FadeInSection from "./components/FadeInSection";
 import Service from "./components/Service";
+import Gallery from "./components/Gallery";
 import SlideShow from "./components/SlideShow";
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
         setGalleryVisible={setGalleryVisible}
       />
       {galleryVisible &&
-        <div></div>
+        <Gallery />
       }
       {galleryVisible === false &&
       <>
