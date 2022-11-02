@@ -34,7 +34,7 @@ function Gallery() {
   };
   const pics = [];
   for (let i = 1; i<=6; i++) {
-    pics.push(<img  style={picStyle} src={process.env.PUBLIC_URL + `/images/Gallery/P${i}.jpg`}></img>)
+    pics.push(<img  class="gallery-pic" style={picStyle} src={process.env.PUBLIC_URL + `/images/Gallery/P${i}.jpg`}></img>)
   }
     return (
         <div class="gallery" style={galleryStyle}>
