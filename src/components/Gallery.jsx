@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import SlideShow from "./SlideShow";
+import * as FileFunctions from "../FileFunctions.js";
 
 function Gallery() {
     const [selected, setSelected] = useState(false);
@@ -32,16 +34,28 @@ function Gallery() {
     padding: "0",
     margin: "0",
   };
+  const popupStyle = {
+    width: "100%",
+    height: "100%",
+    zIndex: "2",
+    position: "absolute",
+    backgroundColor: "rgba(0,0,0,0.5)"
+  };
+  const numFiles = FileFunctions.getNumFiles(process.env.PUBLIC_URL + `/images/Gallery`);
   const pics = [];
-  for (let i = 1; i<=6; i++) {
+  for (let i = 1; i<=numFiles; i++) {
     pics.push(<img  class="gallery-pic" style={picStyle} src={process.env.PUBLIC_URL + `/images/Gallery/P${i}.jpg`}></img>)
   }
     return (
         <div class="gallery" style={galleryStyle}>
+            <div id="gallery-popup" style={popupStyle}>
+                <SlideShow />
+            </div>
             <h3 style={galleryTitleStyle}>Check Out Our Past Work!</h3>
             <div style={galleryPicSectionStyle} class="gallery-pic-section">
                 {pics}
             </div>
+            
         </div>
     );
   }

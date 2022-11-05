@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import Circle from "./Circle";
+import * as FileFunctions from "../FileFunctions.js";
 // import Images from "../../public/images/before-after";
 
 function SlideShow() {
@@ -65,6 +66,8 @@ function SlideShow() {
         flexDirection: "row",
         padding: "20px"
     }
+
+    //const numFiles = FileFunctions.getNumFiles(process.env.PUBLIC_URL + `/images/before-after`);
 
     const [counter, setCounter] = useState(1);
 
