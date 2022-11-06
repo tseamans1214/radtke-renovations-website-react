@@ -135,7 +135,14 @@ function App() {
         title="Check Out Our Past Work!"
         color="white"
         backgroundColor="black"
-        children={<SlideShow />}
+        children={
+          <SlideShow
+            dir="/images/before-after/" 
+            isBeforeAfter={true}
+            currentImage={1}
+            numImages={5}
+          />
+        }
       />
       <Section 
         id="contact-section"

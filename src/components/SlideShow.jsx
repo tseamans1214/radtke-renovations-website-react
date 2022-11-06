@@ -4,7 +4,7 @@ import Circle from "./Circle";
 import * as FileFunctions from "../FileFunctions.js";
 // import Images from "../../public/images/before-after";
 
-function SlideShow() {
+function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
     const contentStyle = {
         display: "flex",
         flexDirection: "column",
@@ -69,7 +69,7 @@ function SlideShow() {
 
     //const numFiles = FileFunctions.getNumFiles(process.env.PUBLIC_URL + `/images/before-after`);
 
-    const [counter, setCounter] = useState(1);
+    const [counter, setCounter] = useState(currentImage);
 
     useEffect(() => {
         // setCounter(1);
@@ -81,59 +81,56 @@ function SlideShow() {
 
     const changeCount = (amountChanged) => {
         if (counter + amountChanged == 0) {
-            setCounter(5);
-        } else if (counter + amountChanged == 6) {
+            setCounter(numImages);
+        } else if (counter + amountChanged == numImages + 1) {
             setCounter(1)
         } else {
             setCounter(counter + amountChanged);
         }
     };
 
+    const circles = [];
+    for (let i = 1; i<=numImages; i++) {
+        circles.push(<Circle 
+            index={i}
+            counter={counter}
+            setCounter={setCounter}
+        />);
+    }
+
     return (
         <div style={contentStyle}>
-            <section style={sectionStyle}>
-                <div className="col" style={colStyle}>
-                    <h3>Before</h3>
-                    <div style={imageContainer}>
-                        <img  style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
-                        <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
-                    
+           {isBeforeAfter &&
+                <section style={sectionStyle}>
+                
+                    <div className="col" style={colStyle}>
+                        <h3>Before</h3>
+                        <div style={imageContainer}>
+                            <img  style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
+                            <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
+                        
+                        </div>
                     </div>
-                </div>
-                <div className="col" style={colStyle}>
-                    <h3>After</h3>
-                    <div style={imageContainer}>
-                        <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
-                        <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
+                    <div className="col" style={colStyle}>
+                        <h3>After</h3>
+                        <div style={imageContainer}>
+                            <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
+                            <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            }
+            {isBeforeAfter === false &&
+                <section style={sectionStyle}>
+                    <div style={imageContainer}>
+                            <img  style={imageStyle} src={process.env.PUBLIC_URL + `/images/gallery/P${counter}.jpg`}></img>
+                            <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
+                            <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
+                    </div>
+                </section>
+            }
             <div style={circleSectionStyle}>
-                <Circle 
-                    index={1}
-                    counter={counter}
-                    setCounter={setCounter}
-                />
-                <Circle 
-                    index={2}
-                    counter={counter}
-                    setCounter={setCounter}
-                />
-                <Circle 
-                    index={3}
-                    counter={counter}
-                    setCounter={setCounter}
-                />
-                <Circle 
-                    index={4}
-                    counter={counter}
-                    setCounter={setCounter}
-                />
-                <Circle 
-                    index={5}
-                    counter={counter}
-                    setCounter={setCounter}
-                />
+                {circles}
             </div>
         </div>
         
