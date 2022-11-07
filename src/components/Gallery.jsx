@@ -43,14 +43,14 @@ function Gallery() {
     textAlign: "right",
     zIndex: "2",
     position: "absolute",
-    backgroundColor: "rgba(0,0,0,0.5)"
+    backgroundColor: "black"
   };
   const closeButton = {
     width: "100%",
     padding: "30px",
     textAlign: "right",
     fontSize: "48px",
-    color: "black",
+    color: "white",
   }
   function importAll(r) {
     let images = {};
