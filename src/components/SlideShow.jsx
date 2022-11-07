@@ -1,8 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import Circle from "./Circle";
-import * as FileFunctions from "../FileFunctions.js";
-// import Images from "../../public/images/before-after";
 
 function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
     const contentStyle = {
@@ -67,12 +65,9 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
         padding: "20px"
     }
 
-    //const numFiles = FileFunctions.getNumFiles(process.env.PUBLIC_URL + `/images/before-after`);
-
     const [counter, setCounter] = useState(currentImage);
 
     useEffect(() => {
-        // setCounter(1);
         const interval = setInterval(() => {
             changeCount(1);
           }, 5000);

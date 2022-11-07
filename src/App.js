@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import Circle from "./components/Circle";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -47,6 +48,14 @@ function App() {
     textAlign: "center"
   }
   const [galleryVisible, setGalleryVisible] = useState(false);
+  
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+  }
+  const imageDirs = importAll(require.context('../public/images/before-after', false, /\.(png|jpe?g|svg)$/));
+
   useEffect(() => {
   }, [galleryVisible]);
   return (
@@ -140,7 +149,7 @@ function App() {
             dir="/images/before-after/" 
             isBeforeAfter={true}
             currentImage={1}
-            numImages={5}
+            numImages={Object.values(imageDirs).length / 2}
           />
         }
       />

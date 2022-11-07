@@ -1,8 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import SlideShow from "./SlideShow";
-import * as FileFunctions from "../FileFunctions.js";
-import fs from 'fs';
 
 function Gallery() {
     const [selected, setSelected] = useState(false);
@@ -52,19 +50,26 @@ function Gallery() {
     padding: "30px",
     textAlign: "right",
     fontSize: "48px",
-    color: "black"
+    color: "black",
   }
-//   useEffect(() => {
-//     //let result = FileFunctions.getNumFiles(process.env.PUBLIC_URL + `/images/gallery`);
-//     //await RNFS.readDir()
-//     let result = fs.readdirSync(process.env.PUBLIC_URL + `/images/gallery`);
-//     setNumFiles(result.length);
-//   }, []);
+  function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+  }
+  const imageDirs = importAll(require.context('../../public/images/gallery', false, /\.(png|jpe?g|svg)$/));
 
   const pics = [];
-  for (let i = 1; i<=6; i++) {
-    pics.push(<img  class="gallery-pic" style={picStyle} src={process.env.PUBLIC_URL + `/images/Gallery/P${i}.jpg`} onClick={() => {setPopUpVisible(true); setCurrentImage(i)}}></img>)
-  }
+// Old way
+//   for (let i = 1; i<=6; i++) {
+//     pics.push(<img  class="gallery-pic" style={picStyle} src={process.env.PUBLIC_URL + `/images/gallery/P${i}.jpg`} onClick={() => {setPopUpVisible(true); setCurrentImage(i)}}></img>)
+//   }
+  let i = 1;
+  Object.values(imageDirs).forEach((image) => {
+    let currentNum = i;
+    pics.push(<img  class="gallery-pic" style={picStyle} src={image} onClick={() => {setPopUpVisible(true); setCurrentImage(currentNum)}}></img>)
+    i++;
+  });
     return (
         <div class="gallery" style={galleryStyle}>
             {popUpVisible &&
@@ -74,7 +79,7 @@ function Gallery() {
                         dir="/images/gallery/" 
                         isBeforeAfter={false}
                         currentImage={currentImage}
-                        numImages={6}
+                        numImages={Object.values(imageDirs).length}
                     />
                 </div>
             }
