@@ -87,9 +87,9 @@ function Gallery() {
                 <SlideShow />
             </div> */}
             <h3 style={galleryTitleStyle}>Check Out Our Past Work!</h3>
-            <div style={galleryPicSectionStyle} class="gallery-pic-section">
+            <a style={galleryPicSectionStyle} class="gallery-pic-section" href="#gallery-popup">
                 {pics}
-            </div>
+            </a>
             
         </div>
     );
