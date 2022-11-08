@@ -61,8 +61,8 @@ function Header({setGalleryVisible}) {
             </div>
           </a>
           <nav style={navStyle}>
-            <a class="hide" href="#header" onClick={() => setGalleryVisible(false)}>Home</a>
-            <a class="hide" href="#about-section" onClick={() => setGalleryVisible(false)}>About</a>
+            <a class="hide hide1" href="#header" onClick={() => setGalleryVisible(false)}>Home</a>
+            <a class="hide hide2" href="#about-section" onClick={() => setGalleryVisible(false)}>About</a>
             <a class="hide" href="#services-section" onClick={() => setGalleryVisible(false)}>Services</a>
             <a class="hide" href="#" onClick={() => setGalleryVisible(true)}>Gallery</a>
             <a class="hide" href="#contact-section" onClick={() => setGalleryVisible(false)}>Contact</a>
@@ -70,11 +70,11 @@ function Header({setGalleryVisible}) {
           </nav>
           <div id="mySidebar" class="sidebar">
             <a href="#" class="closebtn" onClick={closeNav}>×</a>
-            <a href="#" onClick={() => setGalleryVisible(false)}>Home</a>
-            <a href="#about-section" onClick={() => setGalleryVisible(false)}>About</a>
-            <a href="#services-section" onClick={() => setGalleryVisible(false)}>Services</a>
-            <a href="#" onClick={() => setGalleryVisible(true)}>Gallery</a>
-            <a href="#contact-section" onClick={() => setGalleryVisible(false)}>Contact</a>
+            <a href="#" onClick={() => {setGalleryVisible(false); closeNav();}}>Home</a>
+            <a href="#about-section" onClick={() => {setGalleryVisible(false); closeNav();}}>About</a>
+            <a href="#services-section" onClick={() => {setGalleryVisible(false); closeNav();}}>Services</a>
+            <a href="#" onClick={() => {setGalleryVisible(true); closeNav();}}>Gallery</a>
+            <a href="#contact-section" onClick={() => {setGalleryVisible(false); closeNav();}}>Contact</a>
           </div>
       </header>
     );

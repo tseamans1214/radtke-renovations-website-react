@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import Circle from "./components/Circle";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Section from "./components/Section";
@@ -70,12 +69,10 @@ function App() {
       <>
       <Section 
         id="top-section"
-        // title="Turn your home into your dream home!"
-        // paragraph="Contact us today!"
         color="white"
         children={
           <div style={titleSectionStyle}>
-            <h1>Turn Your home into your dream home!</h1>
+            <h1>Turn your home into your dream home!</h1>
             <div style={contactButtonStyle}>
               <h2>Contact us TODAY!</h2>
               <h3>602-705-6625</h3>
