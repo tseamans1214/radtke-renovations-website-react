@@ -34,6 +34,7 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
     const leftArrowStyle = {
         width: "15%",
         height: "100%",
+        paddingLeft: "35px",
         backgroundColor: "rgba(0,0,0,0.0)",
         position: "absolute",
         left: "0%",
@@ -42,12 +43,13 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
         alignItems: "center",
         justifyContent: "space-around",
         fontSize: "10em",
-        color: "white"
+        color: "rgba(255,255,255,0.60)"
     }
 
     const rightArrowStyle = {
         width: "15%",
         height: "100%",
+        paddingRight: "35px",
         backgroundColor: "rgba(0,0,0,0.0)",
         position: "absolute",
         right: "0%",
@@ -56,7 +58,7 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
         alignItems: "center",
         justifyContent: "space-around",
         fontSize: "10em",
-        color: "white"
+        color: "rgba(255,255,255,0.60)"
     }
 
     const circleSectionStyle = {
