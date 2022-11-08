@@ -53,7 +53,7 @@ function Header({setGalleryVisible}) {
 
     return (
         <header class="header" style={headerStyle}>
-          <a style={logoAreaStyle} href="#header">
+          <a style={logoAreaStyle} href="#header" onClick={() => setGalleryVisible(false)}>
             <img style={logoStyle} src="images/logo/logo.png" alt="Radtke Renovations LLC"></img>
             <div style={logoStyle}>
               <h1>Radtke Renovations LLC</h1>
