@@ -33,14 +33,15 @@ function App() {
     minHeight: "100%"
   }
   const missionSectionStyle = {
-    padding: "0px 60px 20px 60px",
+    padding: "0px 30px 20px 30px",
     textAlign: "center"
   }
   const missionListStyle = {
-    textAlign: "left"
+    textAlign: "center"
   }
   const missionItemStyle = {
-    marginTop: "25px"
+    marginTop: "25px",
+    listStyleType: "none"
   }
   const contactSectionStyle = {
     textAlign: "center"
