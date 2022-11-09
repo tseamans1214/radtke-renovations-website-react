@@ -1,14 +1,8 @@
-import { findByLabelText } from "@testing-library/react";
 import React from "react";
-import { useState, useEffect } from 'react';
 
 function Service({title, backgroundImage}) {
-    const [selected, setSelected] = useState(false);
 
   const serviceStyle = {
-    // display: "inline-block",
-    // width: "25%",
-    // height: "25%",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -29,7 +23,7 @@ function Service({title, backgroundImage}) {
     marginTop: "50"
   }
     return (
-        <div class="service" style={serviceStyle}>
+        <div className="service" style={serviceStyle}>
             <h3 style={serviceTitleStyle}>{title}</h3>
         </div>
     );

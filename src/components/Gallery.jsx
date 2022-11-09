@@ -1,10 +1,8 @@
 import React from "react";
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import SlideShow from "./SlideShow";
 
 function Gallery() {
-    const [selected, setSelected] = useState(false);
-    const [numFiles, setNumFiles] = useState(0);
     const [popUpVisible, setPopUpVisible] = useState(false);
     const [currentImage, setCurrentImage] = useState(1);
 
@@ -67,11 +65,11 @@ function Gallery() {
   let i = 1;
   Object.values(imageDirs).forEach((image) => {
     let currentNum = i;
-    pics.push(<img  class="gallery-pic" style={picStyle} src={image} onClick={() => {setPopUpVisible(true); setCurrentImage(currentNum)}}></img>)
+    pics.push(<img  className="gallery-pic" style={picStyle} src={image} onClick={() => {setPopUpVisible(true); setCurrentImage(currentNum)}}></img>)
     i++;
   });
     return (
-        <div class="gallery" style={galleryStyle}>
+        <div id="gallery" className="gallery" style={galleryStyle}>
             {popUpVisible &&
                 <div id="gallery-popup" style={popupStyle}>
                     <a style={closeButton} href="#" onClick={() => setPopUpVisible(false)}>×</a>
@@ -83,11 +81,8 @@ function Gallery() {
                     />
                 </div>
             }
-            {/* <div id="gallery-popup" style={popupStyle}>
-                <SlideShow />
-            </div> */}
             <h3 style={galleryTitleStyle}>Check Out Our Past Work!</h3>
-            <a style={galleryPicSectionStyle} class="gallery-pic-section" href="#gallery-popup">
+            <a style={galleryPicSectionStyle} className="gallery-pic-section" href="#gallery-popup">
                 {pics}
             </a>
             

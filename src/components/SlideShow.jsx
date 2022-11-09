@@ -77,9 +77,9 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
     }, [counter]);
 
     const changeCount = (amountChanged) => {
-        if (counter + amountChanged == 0) {
+        if (counter + amountChanged === 0) {
             setCounter(numImages);
-        } else if (counter + amountChanged == numImages + 1) {
+        } else if (counter + amountChanged === numImages + 1) {
             setCounter(1)
         } else {
             setCounter(counter + amountChanged);
@@ -103,7 +103,7 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
                     <div className="col" style={colStyle}>
                         <h3>Before</h3>
                         <div style={imageContainer}>
-                            <img  style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
+                            <img  style={imageStyle} alt="Before" src={process.env.PUBLIC_URL + `/images/before-after/B${counter}.jpg`}></img>
                             <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
                         
                         </div>
@@ -111,7 +111,7 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
                     <div className="col" style={colStyle}>
                         <h3>After</h3>
                         <div style={imageContainer}>
-                            <img style={imageStyle} src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
+                            <img style={imageStyle} alt="After" src={process.env.PUBLIC_URL + `/images/before-after/A${counter}.jpg`}></img>
                             <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
                         </div>
                     </div>
@@ -120,7 +120,7 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
             {isBeforeAfter === false &&
                 <section style={sectionStyle}>
                     <div style={imageContainer}>
-                            <img  style={imageStyle} src={process.env.PUBLIC_URL + `/images/gallery/P${counter}.jpg`}></img>
+                            <img  style={imageStyle} alt="Gallery Slideshow" src={process.env.PUBLIC_URL + `/images/gallery/P${counter}.jpg`}></img>
                             <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
                             <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
                     </div>

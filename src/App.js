@@ -1,10 +1,8 @@
 import React from "react";
 import { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Section from "./components/Section";
-import FadeInSection from "./components/FadeInSection";
 import Service from "./components/Service";
 import Gallery from "./components/Gallery";
 import SlideShow from "./components/SlideShow";
@@ -24,9 +22,7 @@ function App() {
     display: "inline-block",
     padding: "0px",
     margin: "0px",
-    // backgroundColor: "white",
     color: "white",
-    // border: "2px solid black",
     borderRadius: "10px"
   }
   const servicesStyle = {
@@ -37,11 +33,14 @@ function App() {
     minHeight: "100%"
   }
   const missionSectionStyle = {
-    padding: "20px 60px 20px 60px",
+    padding: "0px 60px 20px 60px",
     textAlign: "center"
   }
   const missionListStyle = {
     textAlign: "left"
+  }
+  const missionItemStyle = {
+    marginTop: "25px"
   }
   const contactSectionStyle = {
     textAlign: "center"
@@ -91,10 +90,10 @@ function App() {
           <div style={missionSectionStyle}>
             <h3>Our Mission</h3>
               <ul style={missionListStyle}>
-                <li>To perform for our customers the highest level of quality construction services at fair market competative prices.</li>
-                <li>To maintain the highest levels of professionalism, integrity, honesty and fairness with our suppliers, subcontractors, professional associates and customers.</li>
-                <li>To become the leading construction firm, while delivering projects that consistantly exceeds international standards and provide exceptional customer satisfaction</li>
-                <li>To continually devliver excellent value and innavative construction solutions to meet our clients requirements.</li>
+                <li style={missionItemStyle}>To perform for our customers the highest level of quality construction services at fair market competative prices.</li>
+                <li style={missionItemStyle}>To maintain the highest levels of professionalism, integrity, honesty and fairness with our suppliers, subcontractors, professional associates and customers.</li>
+                <li style={missionItemStyle}>To become the leading construction firm, while delivering projects that consistantly exceeds international standards and provide exceptional customer satisfaction</li>
+                <li style={missionItemStyle}>To continually devliver excellent value and innavative construction solutions to meet our clients requirements.</li>
               </ul>
           </div>
         }

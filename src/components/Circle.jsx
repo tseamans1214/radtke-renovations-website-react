@@ -1,10 +1,8 @@
 import React from "react";
-import { useState, useEffect } from 'react';
 
 function Circle({index, counter, setCounter}) {
-    const [selected, setSelected] = useState(false);
     let color = "black";
-    if (index == counter) {
+    if (index === counter) {
       color = "white";
     } else {
       color = "black";
@@ -20,10 +18,6 @@ function Circle({index, counter, setCounter}) {
     cursor: "pointer",
     transition: "background-color 0.8s ease"
   }
-
-  // function setCounter() {
-  //   counter = index;
-  // }
     return (
         <div style={circleStyle} onClick={() => setCounter(index)}></div>
     );
