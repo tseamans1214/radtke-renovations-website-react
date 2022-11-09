@@ -92,6 +92,7 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
             index={i}
             counter={counter}
             setCounter={setCounter}
+            key={i}
         />);
     }
 
