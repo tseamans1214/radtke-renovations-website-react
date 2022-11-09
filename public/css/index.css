@@ -182,3 +182,35 @@ nav a:hover {
         width: 100% !important;
     }
  }
+
+ @media only screen and (max-height: 900px) {
+    h1 {
+        font-size: 2.8em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+    
+    h3 {
+        font-size: 2.0em;
+    }
+    
+    
+    nav {
+        font-size: 2.5em;
+    }
+
+    .nav-button {
+        font-size: 2.5em;
+    }
+    
+    p, li, footer{
+        font-size: 2.0em;
+    }
+
+    header div h2 {
+        display: none;
+    }
+    
+}
