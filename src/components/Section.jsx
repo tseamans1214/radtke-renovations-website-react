@@ -28,7 +28,8 @@ function Section ({id, title, paragraph, list, color, backgroundColor, backgroun
         borderBottom: "2px solid " + color
     }
     const paragraphStyle = {
-        padding: "20px"
+        padding: "5px 10px 5px 10px",
+        textAlign: "center"
     }
     
     return (

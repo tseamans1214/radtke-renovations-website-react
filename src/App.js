@@ -33,15 +33,18 @@ function App() {
     minHeight: "100%"
   }
   const missionSectionStyle = {
-    padding: "0px 30px 20px 30px",
+    // padding: "0px 30px 20px 30px",
     textAlign: "center"
   }
   const missionListStyle = {
-    textAlign: "center"
+    textAlign: "center",
+    margin: "0px 15px 25px 15px",
+    padding: "0px"
   }
   const missionItemStyle = {
     marginTop: "25px",
-    listStyleType: "none"
+    listStyleType: "none",
+    textAlign: "center"
   }
   const contactSectionStyle = {
     textAlign: "center"
@@ -91,10 +94,10 @@ function App() {
           <div style={missionSectionStyle}>
             <h3>Our Mission</h3>
               <ul style={missionListStyle}>
-                <li style={missionItemStyle}>To perform for our customers the highest level of quality construction services at fair market competative prices.</li>
-                <li style={missionItemStyle}>To maintain the highest levels of professionalism, integrity, honesty and fairness with our suppliers, subcontractors, professional associates and customers.</li>
-                <li style={missionItemStyle}>To become the leading construction firm, while delivering projects that consistantly exceeds international standards and provide exceptional customer satisfaction</li>
-                <li style={missionItemStyle}>To continually devliver excellent value and innavative construction solutions to meet our clients requirements.</li>
+                <li style={missionItemStyle}><strong>To</strong> perform for our customers the highest level of quality construction services at fair market competative prices.</li>
+                <li style={missionItemStyle}><strong>To</strong> maintain the highest levels of professionalism, integrity, honesty and fairness with our suppliers, subcontractors, professional associates and customers.</li>
+                <li style={missionItemStyle}><strong>To</strong> become the leading construction firm, while delivering projects that consistantly exceeds international standards and provide exceptional customer satisfaction</li>
+                <li style={missionItemStyle}><strong>To</strong> continually devliver excellent value and innavative construction solutions to meet our clients requirements.</li>
               </ul>
           </div>
         }
