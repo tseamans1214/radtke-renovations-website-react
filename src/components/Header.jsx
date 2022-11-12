@@ -27,7 +27,7 @@ function Header({setGalleryVisible}) {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   }
 
   const navStyle = {
@@ -37,6 +37,10 @@ function Header({setGalleryVisible}) {
     alignItems: "center",
     justifyContent: "space-evenly",
     textDecoration: "none"
+  }
+
+  const titleStyle = {
+    margin: "0px"
   }
 
   function openNav() {
@@ -56,8 +60,8 @@ function Header({setGalleryVisible}) {
           <a style={logoAreaStyle} href="#header" onClick={() => setGalleryVisible(false)}>
             <img style={logoStyle} src="images/logo/logo.png" alt="Radtke Renovations LLC"></img>
             <div style={logoStyle}>
-              <h1>Radtke Renovations LLC</h1>
-              <h2>Local Arizona Contractor</h2>
+              <h1 style={titleStyle}>Radtke Renovations LLC</h1>
+              <h2 style={titleStyle}>Local Arizona Contractor</h2>
             </div>
           </a>
           <nav style={navStyle}>
@@ -66,7 +70,7 @@ function Header({setGalleryVisible}) {
             <a className="hide" href="#services-section" onClick={() => setGalleryVisible(false)}>Services</a>
             <a className="hide" href="#gallery" onClick={() => setGalleryVisible(true)}>Gallery</a>
             <a className="hide" href="#contact-section" onClick={() => setGalleryVisible(false)}>Contact</a>
-            <div id="nav-button" className="nav-button" onClick={openNav}>☰</div>
+            <div id="nav-button" className="nav-button" onClick={openNav}><div>☰</div></div>
           </nav>
           <div id="mySidebar" className="sidebar">
             <a href="#" className="closebtn" onClick={closeNav}>×</a>
