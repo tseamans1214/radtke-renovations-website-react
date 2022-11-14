@@ -78,7 +78,7 @@ function App() {
             <h1>Turn your home into your dream home!</h1>
             <div style={contactButtonStyle}>
               <h2>Contact us TODAY!</h2>
-              <h3>602-705-6625</h3>
+              <h3>602-708-6625</h3>
             </div>
           </div>
         }
@@ -163,7 +163,7 @@ function App() {
         children={
           <div style={contactSectionStyle}>
             <h3>Owner: Tyson Radtke</h3>
-            <p>Phone Number: <strong>602-705-6625</strong></p>
+            <p>Phone Number: <strong>602-708-6625</strong></p>
             <p>Email: <strong>Tyson@Radrenosllc.com</strong></p>
           </div>
         }
