@@ -73,6 +73,7 @@ function App() {
       <Section 
         id="top-section"
         color="white"
+        backgroundImage="/images/gallery/P3.jpg"
         children={
           <div style={titleSectionStyle}>
             <h1>Turn your home into your dream home!</h1>
@@ -89,7 +90,6 @@ function App() {
         paragraph="We are a local Arizona renovation company that prides on providing professional service to customers."
         color="white"
         backgroundColor="black"
-        backgroundImage="../../public/images/gallery/P3.jpg"
         children={
           <div style={missionSectionStyle}>
             <h3>Our Mission</h3>
@@ -108,7 +108,6 @@ function App() {
         paragraph="We provide a wide range of services to fit your needs with the main ones listed below. Contact us today for any questions!"
         color="black"
         backgroundColor="white"
-        backgroundImage="../../public/images/gallery/P3.jpg"
         children={
           <div style={servicesStyle}>
             <Service
@@ -159,7 +158,6 @@ function App() {
         paragraph="Easily get a hold of us by our phone number or email!"
         color="black"
         backgroundColor="white"
-        backgroundImage="../../public/images/gallery/P3.jpg"
         children={
           <div style={contactSectionStyle}>
             <h3>Owner: Tyson Radtke</h3>

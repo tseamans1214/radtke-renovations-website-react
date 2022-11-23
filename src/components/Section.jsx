@@ -2,20 +2,35 @@ import { findByLabelText } from "@testing-library/react";
 import React from "react";
 
 function Section ({id, title, paragraph, list, color, backgroundColor, backgroundImage, children}) {
-    const sectionStyle = {
-        display: "flex",
-        // minHeight: "50vh",
-        paddingTop: "20px",
-        // paddingBottom: "20px",
-        alignItems: "center",
-        flexDirection: "column",
-        color: color,
-        backgroundColor:  backgroundColor
-        // backgroundImage: `url("${backgroundImage}")`,
-        // backgroundRepeat: "no-repeat",
-        // backgroundPosition: "center center",
-        // backgroundSize: "cover"
-    }
+    let sectionStyle;
+    if (backgroundImage != null) {
+        sectionStyle = {
+            display: "flex",
+            // minHeight: "50vh",
+            paddingTop: "20px",
+            // paddingBottom: "20px",
+            alignItems: "center",
+            flexDirection: "column",
+            color: color,
+            backgroundColor:  backgroundColor,
+            background: `url("${backgroundImage}"), rgba(22, 22, 22, 0.33)`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+            backgroundSize: "cover",
+            backgroundBlendMode: "overlay"
+        }
+    } else {
+        sectionStyle = {
+            display: "flex",
+            // minHeight: "50vh",
+            paddingTop: "20px",
+            // paddingBottom: "20px",
+            alignItems: "center",
+            flexDirection: "column",
+            color: color,
+            backgroundColor:  backgroundColor
+        }
+    } 
     const childrenStyle = {
         width: "100%",
         // height: "600px",
