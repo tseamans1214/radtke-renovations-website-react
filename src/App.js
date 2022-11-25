@@ -73,7 +73,7 @@ function App() {
       <Section 
         id="top-section"
         color="white"
-        backgroundImage="/images/gallery/P3.jpg"
+        backgroundImage="/images/background/I1.jpg"
         children={
           <div style={titleSectionStyle}>
             <h1>Turn your home into your dream home!</h1>

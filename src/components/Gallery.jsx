@@ -55,7 +55,7 @@ function Gallery() {
     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
     return images;
   }
-  const imageDirs = importAll(require.context('../../public/images/gallery', false, /\.(png|jpe?g|svg)$/));
+  const imageDirs = importAll(require.context('../../public/images/gallery1', false, /\.(png|jpe?g|svg)$/));
 
   const pics = [];
 // Old way

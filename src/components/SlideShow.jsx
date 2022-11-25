@@ -121,7 +121,7 @@ function SlideShow({dir, isBeforeAfter, currentImage, numImages}) {
             {isBeforeAfter === false &&
                 <section style={sectionStyle}>
                     <div style={imageContainer}>
-                            <img  style={imageStyle} alt="Gallery Slideshow" src={process.env.PUBLIC_URL + `/images/gallery/P${counter}.jpg`}></img>
+                            <img  style={imageStyle} alt="Gallery Slideshow" src={process.env.PUBLIC_URL + `/images/gallery1/P${counter}.jpg`}></img>
                             <div className="arrow" style={leftArrowStyle} onClick={() => changeCount(-1)}>&#8678;</div>
                             <div className="arrow" style={rightArrowStyle} onClick={() => changeCount(1)}>&#8680;</div>
                     </div>
