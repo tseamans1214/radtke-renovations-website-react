@@ -23,35 +23,42 @@ html {
 body {
     background-color: black;
     font-size: 62.5%;
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
 }
 
 #top-section {
-    background: url("../images/gallery/P3.jpg"), rgba(22, 22, 22, 0.25);
-    background-repeat: no-repeat;
+    /* background: url("../images/gallery/P3.jpg"), rgba(22, 22, 22, 0.5); */
+    /* background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-blend-mode: overlay;
+    background-blend-mode: overlay; */
+    min-height: 50vh;
+}
+
+#top-section h2, #top-section h3 {
+    font-weight: 400;
 }
 
 h1 {
-    font-size: 3.0em;
+    font-size: 3.5em;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 3.0em;
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 
 nav {
-    font-size: 2.0em;
+    font-size: 2.3em;
 }
 
-p {
-    font-size: 1.5em;
+p, li, footer{
+    font-size: 2.0em;
 }
 
 a {
@@ -61,12 +68,257 @@ a {
 
 nav a {
     color: gray;
+    padding: 15px;
 }
 
 nav a:hover {
     color: white;
 }
 
+.nav-button {
+    display: none;
+    background-color: white;
+    color: black;
+    font-size: 4.5em;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(1,1,1, 0.75);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 20px 0px 0px 0px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+
+  /* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
 .arrow {
     cursor: pointer;
+    border-radius: 30px;
+}
+
+.service {
+    display: inline-block;
+    width: 50%;
+    max-height: 25%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .hide1 {
+        display: none !important;
+    }
+    .gallery-pic {
+        width: 50% !important;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .hide2 {
+        display: none !important;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .service{
+        width: 100% !important;
+    }
+    .hide {
+        display: none;
+    }
+    header div h2 {
+        display: none;
+    }
+    .nav-button {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header {
+        justify-content: space-between !important;
+    }
+    nav {
+        font-size: 2.0em;
+    }
+    .gallery-pic {
+        width: 100% !important;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+    
+    h3 {
+        font-size: 2.2em;
+    }
+    
+    nav, .nav-button {
+        font-size: 2.5em;
+    }
+    
+    p, li, footer{
+        font-size: 1.9em;
+    }
+
+    .arrow {
+        font-size: 5.0em !important;
+    }
+ }
+
+ @media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 2.6em;
+    }
+    
+    h2 {
+        font-size: 2.3em;
+    }
+    
+    h3 {
+        font-size: 2.0em;
+    }
+    
+    
+    nav, .nav-button {
+        font-size: 2.3em;
+    }
+    
+    p, li, footer{
+        font-size: 1.7em;
+    }
+
+    .arrow {
+        font-size: 4.8em !important;
+    }
+    
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 2.4em;
+    }
+    
+    h2 {
+        font-size: 2.1em;
+    }
+    
+    h3 {
+        font-size: 1.8em;
+    }
+    
+    
+    nav, .nav-button {
+        font-size: 2.1em;
+    }
+    
+    p, li, footer{
+        font-size: 1.5em;
+    }
+
+    .arrow {
+        font-size: 4.6em !important;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    
+    h2 {
+        font-size: 1.9em;
+    }
+    
+    h3 {
+        font-size: 1.6em;
+    }
+    
+    
+    nav, .nav-button {
+        font-size: 1.9em;
+    }
+    
+    p, li, footer{
+        font-size: 1.3em;
+    }
+
+    .arrow {
+        font-size: 4.4em !important;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.0em;
+    }
+    
+    h2 {
+        font-size: 1.7em;
+    }
+    
+    h3 {
+        font-size: 1.4em;
+    }
+    
+    
+    nav, .nav-button {
+        font-size: 1.7em;
+    }
+    
+    p, li, footer{
+        font-size: 1.1em;
+    }
+
+    .arrow {
+        font-size: 4.2em !important;
+    }
+    
 }
